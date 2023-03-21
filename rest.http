@@ -1,0 +1,17 @@
+GET http://localhost:4000
+###
+GET http://localhost:4000/abc
+###
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+  "email": "phaptran112@gmail.com",
+  "password": "123456"
+}
+###
+POST http://localhost:4000/users/refresh-token
+###
+POST http://localhost:4000/users/login
+###
+POST http://localhost:4000/users/logout
