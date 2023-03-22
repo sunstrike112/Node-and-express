@@ -1,8 +1,8 @@
-GET http://localhost:4000
+GET http://localhost:3000
 ###
-GET http://localhost:4000/abc
+GET http://localhost:3000/abc
 ###
-POST http://localhost:4000/users/register
+POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
@@ -10,8 +10,8 @@ Content-Type: application/json
   "password": "123456"
 }
 ###
-POST http://localhost:4000/users/refresh-token
+POST http://localhost:3000/users/refresh-token
 ###
-POST http://localhost:4000/users/login
+POST http://localhost:3000/users/login
 ###
-POST http://localhost:4000/users/logout
+POST http://localhost:3000/users/logout
