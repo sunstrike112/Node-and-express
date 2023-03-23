@@ -11,7 +11,7 @@ app.get('/', (req, res, next) => {
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use('/users', UserRoute)
+app.use('/user', UserRoute)
 
 app.use((req, res, next) => {
   // const error = new Error('Not Found')

@@ -2,16 +2,16 @@ GET http://localhost:3000
 ###
 GET http://localhost:3000/abc
 ###
-POST http://localhost:3000/users/register
+POST http://localhost:3000/user/register
 Content-Type: application/json
 
 {
-  "email": "phaptran112@gmail.com",
+  "email": "phaptran111@gmail.com",
   "password": "123456"
 }
 ###
-POST http://localhost:3000/users/refresh-token
+POST http://localhost:3000/user/refresh-token
 ###
-POST http://localhost:3000/users/login
+POST http://localhost:3000/user/login
 ###
-POST http://localhost:3000/users/logout
+POST http://localhost:3000/user/logout

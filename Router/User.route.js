@@ -10,30 +10,29 @@ route.post('/register', async(req, res, next) => {
     const { email, password } = req.body
     const { error } = userValidate(req.body)
     console.log('error ::: ', error)
-
     if(error) {
+      console.log(error)
       throw createError(error.details[0].message)
     }
-    
-    // if(!email || !password) {
-    //   throw createError.BadRequest()
-    // }
 
     const isExists = await User.findOne({
       username: email
     })
+
     if (isExists) {
       throw createError.Conflict(`${email} already exists`)
     }
 
-    const isCreate =  await User.create({
-      username: email,
+    const user = new User({
+      email,
       password
     })
+
+    const savedUser = await user.save()
     
     return res.json({
       status: 'OK',
-      elements: isCreate
+      elements: savedUser
     })
   } catch (error) {
     next(error)
